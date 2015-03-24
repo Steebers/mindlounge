@@ -1,0 +1,663 @@
+/****************************************************************************
+							Mind Lounge Styles 
+								  For:
+							post.php, about.html  
+	3/13/15						
+*****************************************************************************/
+
+
+/**********************************************************************************/
+html { 
+	background: url('../images/Bground1.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: 'Cherry Cream Soda', cursive;
+	overflow-x: hidden;	
+	height: 100%;
+	width:100%;
+	top:0;
+	bottom:0;
+}
+/*****************************Main Title right hand corner*****************************************************/
+#logo{
+	position:absolute;
+	bottom:8%;
+	right:0;
+	width:25%;
+}
+
+/****************************************BUTTONS and other Global Crud******************************************/
+input[type=button],input[type="submit"], #leave, 
+.JoinChat, input[type="reset"]{
+	margin-left: 80%;
+	padding: 6px 15px;
+	background-color:#F06210;
+	font-size:115%;
+	font-weight:700;
+	cursor:pointer;
+	color: #000;
+	box-shadow: 1px 1px 5px #000; 
+	border:none;
+	font-family: 'Cherry Cream Soda', cursive;
+	-webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+	text-decoration:none;
+}
+input[type="submit"]:hover, #leave:hover,
+.JoinChat:hover,input[type=button]:hover, input[type="reset"]:hover{
+	background-color:#000;
+	color: #F06210;
+	box-shadow: 1px 1px 1px #000; 
+}
+::-moz-selection {
+	background-color:#000066;
+	color:#F06210;
+}
+::selection {
+	background-color:#000066;
+	color:#F06210;
+}
+
+::-webkit-input-placeholder { 
+	color:    #bbb;
+	line-height:1.5;
+	font-size: 21px;
+	padding:0px 10px;
+}
+::-moz-placeholder { 
+	color:    #bbb;
+	line-height:1.5;
+	font-size: 21px;
+	padding:0px 10px;
+}
+::-ms-input-placeholder {
+	color:    #bbb;
+	line-height:1.5;
+	font-size: 21px;
+	padding:0px 10px;
+}
+
+/*****************************************************************************
+								Main Content
+*****************************************************************************/
+.wrapper{
+	
+}
+
+.feeds_container{
+	position: fixed;
+    top:10%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 575px;
+	background:rgba(255,255,255,0.50);
+	height:90%;
+} 
+/****For jQuery*****/
+.containerSlide{
+    top:50%; 
+}
+.feeds{
+	word-wrap: break-word;
+	position: relative;
+}
+
+
+.feeds ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.feeds li {
+	padding: 15px 15px 15px 15px;
+	line-height:1.5;
+    font-size: 13px;
+    color: #000;
+    position: relative;
+    border-top: 2px solid black;
+	overflow:hidden;
+	word-wrap:break-word;
+	position:relative;
+	display:block;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+		transition: all .2s linear;
+}
+.feeds li:hover {
+	background:rgba(255,255,255,.55);
+}
+.left{
+	position:relative;
+	float:left;
+	max-width:135px;   
+	
+}
+.right{
+	float:right;
+	width:390px;
+	margin-bottom:8px;  
+	
+}
+.UserName{
+	font-size:23px;
+	color: #fff;
+	text-align:center;
+	text-shadow: 1px 1px 1.0px #000,
+		-1px 1px 1.0px #000,
+		1px -1px 1.0px #000,
+		-1px -1px 1.0px #000,
+		3px 3px 2px #000;		
+}
+.profilePic {
+	display:block;
+    height: 135px;
+	width: 135px;
+	top:0;
+	overflow: hidden;
+	position:relative;
+	background: url('../profilePics/Default_UserPic.png');  
+	background-repeat: no-repeat !important;  
+	background-size: 140px auto !important; 
+	background-position: center top !important;
+
+}
+.MindFeed{
+	font-family: 'Chivo', cursive;
+	font-size: 22px;
+	display:block;
+	color: #000;
+	text-align:left;
+	line-height:1.3;
+	padding-top:10px;
+}
+.MindFeedSM{	
+	padding-top:27px;
+	font-size: 25px;
+	line-height:1.5;	
+}
+.MindFeedLG{	
+	padding-top:10px;
+	font-size: 20px;
+	line-height:1.2;
+}
+.date{
+	color: #333;
+	font-size: 12px;
+	padding:8px 0;
+	display:block;
+	text-align:right;
+	text-decoration:italic;
+}
+.JoinChat{
+	float:right;
+	
+}
+.feeds .loading {
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    padding: 0px 0;
+	background:rgba(255,255,55,0.0);
+    overflow: hidden;
+}
+.loading {
+	display: none;
+	width: 590px;
+	margin:auto;
+	text-align:center;
+}
+/**********************************************************************************************
+										Form For Adding Ideas
+**********************************************************************************************/
+.IdeaForm{
+	position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+	background:rgba(255,255,255,0.50);
+    width: 575px;
+	height:10%;
+	z-index:10000;
+	border-bottom: 2px solid #000 ;
+	box-shadow:1px 0px 50px #000;
+}
+/****For jQuery*****/
+.IdeaFormSlide{
+	height:50%;
+	
+}
+#pulldown{
+	width: 500px;
+	margin:10px auto 0;
+	text-align:right;	
+	background-color:#fff;
+	overflow:hiddin;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+#pulldown p{
+	display:inline;
+	color:#AAA;
+	
+}
+#shareButt{
+	display:none;	
+	margin: -8 8 8 0 ;
+	-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	cursor:pointer;
+	background-color:#fff;
+	border: 1px solid #aaa;
+	color:#aaa;	
+	padding:2 5;
+	-webkit-transition: all .5s linear;
+	font-family: 'Cherry Cream Soda', cursive;
+
+}
+#shareButt:hover{
+	background-color:#F06210;
+	border: 1px solid #fff;
+	color:#000;	
+}
+#add-news-form textarea {
+	text-decoration:bold;
+	font-family: 'Cherry Cream Soda', cursive;
+	background:;
+	height: 40px;
+	width: 500px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #333;
+	line-height:1.3;
+	font-size: 21px;
+	padding:0px 10px;  
+	border:none;
+	outline: 0;
+	resize: none;
+	overflow:hidden;
+}
+#add-news-form textarea:focus{
+    outline: 0;
+}
+
+/*******************************************************************
+							 Menu
+*******************************************************************/
+
+.top_menu ul {
+    margin: 0; 
+    padding: 0;
+    list-style-type: none;
+	width:28px;
+	position:fixed;
+	top:2%;
+	left:0;	
+}
+.top_menu ul li a ,.profileLink, .backButt {
+    text-decoration: none;
+    color: #000; 
+    padding:  10px 0px 0 0;
+	font-size:16px;
+	width:220px;
+	height:35px;
+    display:block;
+	margin:10px auto 0 auto ;
+	text-align:right;
+	font-weight:900;
+	overflow:hiddin;
+	cursor:pointer;
+	background-color: #F06210;
+	-webkit-transition: width .3s ease-in, 
+		color .8s,
+		background-color .5s,
+		height .6s;
+	-moz-transition: width .3s ease-in, 
+		color .8s,
+		background-color .5s,
+		height .6s;
+	-o-transition:width .3s ease-in, 
+		color .8s,
+		background-color .5s,
+		height .6s;
+	transition:width .3s ease-in, 
+		color .8s,
+		background-color .5s,
+		height .6s;                          
+}
+.top_menu ul li a:hover:not(.MLlogo), .backButt:hover{
+    color:#F06210;
+    background-color:#fff;
+	width:250px;
+	box-shadow:2px 2px 4px #000;
+	border-radius:0px;	
+
+}
+
+.profileLink:hover{
+	color:#F06210;
+    background-color:#fff;
+	height:250px;
+	width:250px;
+	box-shadow:2px 2px 4px #000;
+	border-radius:0px;	
+}
+.profile{
+	width:200px;
+	height:00px;
+	overflow:hidden;  
+		
+}
+.profile h1{
+	font-size:25px;
+	text-align:center;
+	color:black;		
+}
+.profileLink:hover > .profile {
+	height:200px;
+		-webkit-transition: all .6s linear;
+
+			
+}	
+
+.top_menu ul li a.MLlogo{
+	background: url('../images/mlLogo.png'); 
+	background-repeat: no-repeat;  
+	background-size: auto 80px; 
+	background-position: center;
+	height:80px;
+	width:220px;
+	border:none;
+	outline:none;
+		-webkit-transition: all .2s ease;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+		transition: all .2s linear;
+ }
+.top_menu ul li a.MLlogo:hover{
+	background: url('../images/mlLogoHOME.png'); 
+	background-repeat: no-repeat;       			
+		
+ }
+
+/*****************************************************************************************************
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+					------------------------------|| Chat ||------------------------
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+******************************************************************************************************/
+.chat_container{
+	position: fixed;
+    bottom:20%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 575px;
+	background:rgba(255,255,255,0.50);
+	height:80%;
+} 
+
+.feed_head{
+	font-size:105%;
+	text-align:center;
+	padding:15px 15px 10;
+	background:rgba(0,0,0,1);
+		color:#fff;
+
+}
+.Comment_Contain{
+	position: fixed;
+    bottom:0;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+	background:rgba(255,255,255,0.50);
+    width: 575px;
+	height:20%;
+	z-index:10000;
+	border-top: 3px solid #000;
+}
+
+.Chat_Bottm{
+	width: 550px;
+	margin:10px auto 0;
+	text-align:right;	
+	background-color:fff;
+	height:110px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+.Chat_Bottm p{
+	display:inline;
+	color:#AAA;
+	
+}
+
+#add-news-form textarea.CommentTextarea   {
+	text-decoration:bold;
+	font-family: 'Cherry Cream Soda', cursive;
+	background:;
+	height: 65px;
+	width: 550px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #333;
+	line-height:1.1;
+	font-size: 17px;
+	padding:5px;  
+	border:none;
+	outline: 0;
+	resize: none;
+	overflow:hidden;
+}
+.commentForm textarea:focus{
+    outline: 0;
+}
+.comButt{
+		
+	margin: -8 8 8 0 ;
+	-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	cursor:pointer;
+	background-color:#fff;
+	border: 1px solid #aaa;
+	color:#aaa;	
+	padding:2 5;
+	-webkit-transition: all .5s linear;
+	font-family: 'Cherry Cream Soda', cursive;
+
+}
+.comButt:hover{
+	background-color:#F06210;
+	border: 1px solid #fff;
+	color:#000;	
+}
+
+#add-news-form textarea.CommentTextarea::-webkit-input-placeholder { 
+		color:    #bbb;
+	line-height:1.1;
+	font-size: 17px;
+	padding:0px 0px;
+}
+}
+#add-news-form textarea.CommentTextarea::-moz-placeholder { 
+	color:    #bbb;
+	line-height:1.1;
+	font-size: 17px;
+	padding:0px 0px;
+}
+#add-news-form textarea.CommentTextarea::-ms-input-placeholder {
+	color:    #bbb;
+	line-height:1.1;
+	font-size: 17px;
+	padding:0px 0px;
+}
+.profilePic2 {
+	display:block;
+    height: 90px;
+	width: 90px;
+	top:0;
+	overflow: hidden;
+	position:relative;
+	background: url('../profilePics/Default_UserPic.png');  
+	background-repeat: no-repeat !important;  
+	background-size: 92px auto !important; 
+	background-position: center top !important;
+
+}
+/*****************************************************************************************************
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+--------------------------------ABOUT-----about.html  and CONTACT contact.html------------------------
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+******************************************************************************************************/
+.PageContent{
+	position: absolute;
+    top:0%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 575px;
+	background:rgba(255,255,255,0.50);
+	min-height:100%;
+	 
+}
+.PageContent h1{
+	font-size:350%;
+	text-align:center;
+	color:#F06210;
+	text-shadow: 1px 1px .0px #000,
+		-1px 1px .0px #000,
+		1px -1px .0px #000,
+		-1px -1px .0px #000,
+		3px 3px 3px #000;
+	line-height:.5
+	
+		
+}
+.ThisPage{
+    color:#F06210;
+    background-color:#fff;
+	width:250px;
+	box-shadow:2px 2px 4px #000;
+	border-radius:0px;	
+	font-size:16px; 
+	height:35px;
+    display:block;
+	margin:10px auto 0 auto ;
+	text-align:right;
+	font-weight:900;
+	overflow:hiddin;
+	 padding:  10px 0px 0 0;
+	pointer-events: none;
+}
+#theTEAM{
+	border-top:2px solid #000;
+	text-align:center;	
+	padding:10px 10px 0;
+}
+#theTEAM a{
+	font-size:120%;
+	color:#333;
+	text-decoration: none;
+	
+}
+#theTEAM h3{
+	font-size:120%;
+	line-height:-.5;
+	
+}
+#theTEAM a:hover{
+	text-decoration:none;
+	color:#F06210;
+	text-shadow: 1.75px 1.75px .5px #000; 	
+}
+/*****************************|| ABOUT  ||***********************************************/
+ #about{
+	-webkit-columns:  2;
+	-moz-columns:  2;
+	columns:  2;
+	padding:0 15;
+	font-size:16px; 
+	font-family: 'Sintony', sans-serif;
+	font-weight:700;
+	line-height:1.33;
+}
+#about img{
+	width:250px;
+	float:left;
+	margin:10px;
+}
+.orange{
+	font-size:150%;
+	color:#F06210;
+	font-family: 'Cherry Cream Soda', cursive;
+
+	text-shadow: 1px 1px 1.0px #000,
+		-1px 1px 1.0px #000,
+		1px -1px 1.0px #000,
+		-1px -1px 1.0px #000,
+		3px 3px 3px #000;
+	display: inline;
+	line-height:.8;
+}
+/****************************************************************************/
+#contactForm{
+	
+	
+
+
+}
+#contactForm  ul {
+	
+	width:500px;
+	margin:auto; 		
+}
+
+#contactForm form ul li{
+	list-style-type:none;
+	padding:5px ;
+	text-align:center;
+}
+#contactForm input[type="text"] {
+	
+	font-size: 21px;
+
+}
+#contactForm input[type="text"],#contactForm form li textarea{
+	padding: 6px;
+	font-size:115%;
+	font-family: 'Cherry Cream Soda', cursive;
+	width: 400px;
+}
+#contactForm input[type="submit"],#contactForm input[type="reset"]{
+text-align:center;
+width: 400px;
+margin:auto;
+display:inline;
+}
+
+
+/*
+						/////////  ////   //  /////////
+						//         ////   //  //       //
+						//////     // //  //  //        //
+						//         //  // //  //        //
+						//         //   ////  //       //
+						////////   //    ///  /////////
+*/
